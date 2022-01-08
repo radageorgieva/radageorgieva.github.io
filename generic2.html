@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title> Network Analytics</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="generic2.html" class="logo">Visualizing Correlation of Asset Prices as a Network</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+		<ul class="links">
+							<li><a href="index.html">Overview</a></li>
+							<li> <a href="generic.html">Project 1</a></li>
+							<li class="active"><a href="generic2.html">Project 2</a></li>
+							<li ><a href="generic3.html">Project 3</a></li>
+							<li><a href="generic4.html">Project 4</a></li>
+							<li><a href="elements.html"></a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/rada-georgieva/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/radageorgieva" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+
+<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+						</header>
+								<section>
+									<header>
+										<h2>Network Analytics - Visualizing Correlation of Asset Prices as a Network </h2>
+									</header>
+									<div class="features">
+										<article>
+											<div class="content">
+												<h3>PROJECT OVERVIEW</h3>
+													This project looks at the price movements of a set of assets, and represents the correlation of price movements of the assets as a network to help identify risk and find correlation to lagged asset prices for investing. Stocks that behave similarly are positively correlated, while the ones that behave differently are negatively correlated.
+
+														</br>
+													<br>
+														The main issue with this tasks is that the dataset consists of too many stocks and a standard network visualization creates a visual clutter preventing the derivation of insights. This is clearly observed in the below standard representation readily provided by NetworkX package:
+														<a href="" class="image fit"><img src="images/generic6.png" alt="" /></a>
+
+														</br>
+														Hence, it is important to experiment with the different graph layouts, choose the best, and then enhance your plot by representing the thickness of the edges and size of the nodes to give some insight. </br>
+													</br>
+												To achieve this, I create two functions that do the following:
+												<ol>
+													<li>Function 1: "visualize" </br> This function will create a copy of the graph and filter for a minimum absolute correlation, so that it allows the user to input a minimum correlation they are interested in. It will remove the pairs of assets with correlation smaller than the minimum one. Moreover, it will remove the edges between an asset and itself, as they have correlation 1, which would skew results when we set the node size based on degree. Then it will create a list according to which the sizes of the nodes will be adjusted based on their degree in the new graph. This means that nodes with more edges (so the ones that appear in more asset pairs with high absolute correlation will have a bigger size). The edges of the graph will be thicker when the absolute value of their weight(the correlation) between the two nodes(assets) is larger. In this way, we can understand which the most correlated pairs of assets are. Thanks to the node size, we can also understand which asset appears in the most pairs with correlation above the desired absolute minimum one. This will allow to analyze in terms of portfolio mix. </li>
+																											<a href="" class="image fit"><img src="images/generic7.png" alt="" /></a>
+
+													<li>Function 2: "visualize2" </br>This function optimizes the first one by letting the user look separately at negatively correlated pair and positively correlated ones. This is important when choosing optimal portfolio mix. Moreover, instead of visualizing how big the absolute correlation is through edge width, it does so through edge color, which I think is clearer.
+</li>
+													Example of assets that behave very differently (with correlation less than -0.8) with edge colors varying according to absolute correlation where lighter colors show correlation closer to -1
+													<a href="" class="image fit"><img src="images/generic8.png" alt="" /></a>
+													Example of assets that behave very similarly (with correlation above than 0.9) with edge colors varying according to absolute correlation where lighter colors show correlation closer to 1
+
+													<a href="" class="image fit"><img src="images/generic9.png" alt="" /></a>
+
+												</p>
+
+
+
+
+												<div class="content">
+												<h3>CONCLUSIONS</h3>
+												<p> The visualization of stock movements correlations can be very beneficial for investors who want to distribute risk. However, such data is often way too heavy to be handled with in-built visuals. Hence, we need to extract only the information that is valuable for the decisions we are facing. With different channels such as node size, edge width and color, we can further improve our graphs, avoid visual clutter and take data-driven actions. </p>
+
+
+									</div>
+								</section>
+								<header>
+
+
+
+					</div>
+
+
+
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Rada Georgieva</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+				<footer>
+						<section>
+
+
+								<h3>Social</h3>
+								<ul class="icons alt">
+
+
+									<li><a href="https://www.linkedin.com/in/rada-georgieva/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									<li><a href="https://github.com/radageorgieva" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+
+								</ul>
+						</section>
+					</footer>
+
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

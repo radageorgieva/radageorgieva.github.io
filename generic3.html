@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Spam Filter</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="https://github.com/radageorgieva/Spam_Filter" class="logo">Spam Filter</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+		<ul class="links">
+							<li><a href="index.html">Overview</a></li>
+							<li> <a href="generic.html">Project 1</a></li>
+							<li ><a href="generic2.html">Project 2</a></li>
+							<li class="active"><a href="generic3.html">Project 3</a></li>
+							<li><a href="generic4.html">Project 4</a></li>
+							<li><a href="elements.html"></a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/rada-georgieva/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/radageorgieva" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+
+<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+						</header>
+								<section>
+									<header>
+										<h2>Spam Filter - Text Sentiment Analysis of SMS dataset </h2>
+									</header>
+									<div class="features">
+										<article>
+											<div class="content">
+												<h3>PROJECT OVERVIEW</h3>
+													<p>This is part of a group assignment I completed during the Machine Learning module of my MSc studies. The underlying dataset consists of SMS data from the UCI Machine Learning Repository. The main goal of this assignment is to build a Naive Baye's Spam Filter.
+														</br>
+													<br>
+														To achieve this the following steps are performed:
+														</br>
+														<ol>
+															<li>Load the data into Python, via read_csv from Pandas.</li>
+															<li>Initial exploration of data including wordclouds of spam and non-spam messages to understand whether there are grounds for successful classification.</li>
+															<li>Pre-process the SMS messages: Remove all punctuation and numbers from the SMS messages, change all messages to lower case, and remove stop words (NLTK package used to this end)</li>
+															<li>Shuffle the messages and split them into a training set (two thirds) and a test set (one third).</li>
+															<li>Use the Naïve Bayes package of scikit-learn to train a Bayes classifiers from different distributions and evaluate their performance</li>
+															<li>Tune models by optimizing hyperparameters using GridSearchCV and plot learning curves </li>
+															<li>Choose best performing model and discuss whether predictions are accurate</li>
+														</ol>
+
+
+												<div class="content">
+												<h3>CONCLUSIONS</h3>
+													<p>Both the Bernoulli and the Multinomial models perform very well in terms of weighted accuracy. However, as we said in the beginning, we have an imbalanced dataset skewed towards "ham" text messages. Hence, it is important to look at sensitivity and specificity scores for the two classes. What we can conclude, is that while the two have similar weighted accuracy, MultinomialNB is better in predicting "ham" text messages, while Bernoulli is better at predicting "spam" messages. If the goal of the task is to filter out spam, we would probably be better off using the Bernoulli Naive Bayes. Overall, both models show very good results, generalization is not an issue and none of the scores showing performance of separate classes raise concerns unless we are looking for a classifier that has zero tolerance in spam. A random classifer that labels emails as spam, ham emails randomly based on the historical fraction of ham/spam emails already recieved (86.6% ham and 13.4% spam) will overall accuracy = 1- ((0.1340.866)+(0.8660.134)) = 0.77 (based on Gini index idea), and hence it's evident that both of our classifiers performs better than this random classifier. Based on all the above, one can say this is a good classifier.
+												</p>
+											</div>
+												<div class="content">
+													<p>You can find the code and dataset on my Github page here: <a href = "https://github.com/radageorgieva/Spam_Filter" class="icon brands fa-github"> </a></p>
+											</div>
+
+									</div>
+								</section>
+								<header>
+
+
+
+					</div>
+
+
+
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Rada Georgieva</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

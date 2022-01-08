@@ -1,0 +1,255 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title> Medical Diagnosis</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="https://github.com/radageorgieva/Disease_Prediction.git" class="logo">Medical Diagnosis with Machine Learning</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+		<ul class="links">
+							<li><a href="index.html">Overview</a></li>
+							<li class="active"> <a href="generic.html">Project 1</a></li>
+							<li><a href="generic2.html">Project 2</a></li>
+							<li><a href="generic3.html">Project 3</a></li>
+							<li><a href="generic4.html">Project 4</a></li>
+							<li><a href="elements.html"></a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/rada-georgieva/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/radageorgieva" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+						</header>
+								<section>
+									<header>
+										<h2>Detection and Reduction of Gender Bias in Acute Liver Failure Prediction </h2>
+									</header>
+									<div class="features">
+										<article>
+											<div class="content">
+												<h3>PROJECT OVERVIEW</h3>
+													<p>This paper studies the topic of presence of demographic bias in machine learning solutions for medical diagnosis, focusing on an exemplary case of Acute Liver Prediction performed on a publicly available dataset on Kaggle called “Acute Liver Failure: To predict the liver failure over demographic variables”. </br>
+														</br>
+														The topic is important because its controversy goes beyond the question of rightfulness, ethics and law. In this application of Machine Learning, society is no longer concerned only about the justifiability of the existence of a disparity. Instead, the main concern regards the correct treatment and the well-being of entire communities, nations, races and genders. Traditional medicine failed to abstract from such prejudice. Hence, it is in the hands of machine learning to detect, reduce, and maybe even eliminate biases to ensure an equally accurate and accessible treatment for all people around the globe. </br>
+														</br>
+														To attempt to prove the potential of this solution, an empirical study that trains and optimizes models to predict the occurrence of Acute Liver failure is performed. Furthermore, the paper provides various techniques for detection and reduction of gender-related inequality in model performance. </br>
+
+													</p>
+											</div>
+											<div class="content">
+												<h3>RESEARCH QUESTIONS</h3>
+													<p>
+														The following research questions are answered:<br/>
+														<ol>
+															<li>Are biases present in medical diagnosis algorithms?</li>
+															<li>How can one detect representation biases in machine learning models for medicine?</li>
+															<li>What is the reason for the existence of representation biases in machine learning algorithms for medicine?</li>
+															<li>How can representation biases in machine learning for medicine be reduced?</li>
+														</ol>
+													</p>
+											</div>
+										</article>
+										<article>
+											<div class="content">
+												<h3>DATASET DESCRIPTION</h3>
+													<p>
+														The initial data consists of 8785 data points representing different adults who are citizens of India and participated in the surveys conducted by the JPAC Center for Health Diagnosis and Control in the years 2008-2009 and 2014-2015. The institution used direct interviews, examinations, and blood samples to gather a demographically diverse dataset, with a total of 30 features and a 7.73% Acute Liver Failure ratio. </br>
+														</br>
+														The features can be divided into three main groups: pathologies, demographic data and physical features and habits. In the first segment, there are characteristics such as the dependent variable(ALF), obesity, dyslipidemia, peripheral vascular disease, poor vision, hypertension(individual’s or in the family), diabetes(individual’s or in the family), hepatitis(individual’s or in the family) and chronic fatigue. The presence of these features enables the analysis of a correlation of other diseases with the examined condition, which could provide physicians with more specific risk groups.</br>
+														</br>The demographic variables consist of age, gender, region, marital status, income, education and source of care. This group is crucial for the study, as it not only enables the creation of risk groups and takes into account relevant factors, but also will be the basis on which the detection and reduction of representation biases will be built. </br>
+														</br>
+														The last group of features provides an overview of the lifestyle and overall health condition of the patients. It consists of weight, height, BMI, waist, cholesterol (good, bad and total), physical activity and alcohol consumption. The sensitivity analysis of these can not only indicate the predisposition of certain groups but can also be used for a correct treatment recommendation.
+														</br>
+													</p>
+											</div>
+										</article>
+										<article>
+											<div class="content">
+												<h3>MACHINE LEARNING TECHNIQUES</h3>
+													<p>
+														In this project, I build machine learning models that take a mixture of features provided in the dataset such as ones accounting for the history of diseases of the patients and their family, their physical characteristics like weight, height, age and gender. The latter independent variable suggests that the aim of this algorithm will not only be to accurately diagnose the disease, but also to inspect for the potential presence of gender bias in the process.  </br>
+														</br>
+														This problem can be represented as a binary classification task. In this study, the binary dependent variable will be “ALF”, which in our dataset is equal to 1 when the condition was observed and 0 when it was not.<br />
+														</br>
+														This paper uses the following models to achieve an accurate prediction:
+														<ul>
+															<li>Logistic Regression: as the name suggests, it uses a logistic function to predict a binary dependent variable. </li>
+															<li>Polynomial Logistic Regression: to run a Logistic Regression with polynomial features, as a result, capturing nonlinear features.</li>
+															<li>Random Forest Classification: an ensemble technique, which uses multiple decision trees at a training time, and provides the mode of predictions as an output</li>
+															<li>Gradient Boosting Classification: again an ensemble technique, which leverages Decision Trees, but allows for the improvement of each sequential Tree; In this way, it transforms weak separate predictions into a strong ensemble classifier</li>
+															<li>K Nearest Neighbors: a non-parametric classifier, which assigns to the observation the class corresponding to the most commonly observed one of its k neighbors</li>
+														</ul>
+														When it comes to medical diagnosis, it is most harmful for the patients if they are told that they do not have a disease, which they actually do, as it would reduce their chances of survival significantly. This means that a minimization of false negative classifications is needed. Such an aim can be achieved by maximizing the sensitivity(% true positive classifications) during the hyperparameter optimization of the models using GridSearchCV. </br>
+														</br>
+														On top of this, sensitivity is seen as a fairness criterion, and the detection and reduction of gender bias will be done according to it in the following way - models are trained and optimized on the training set including both genders but the test set is split into “Male” and “Female” subsets to enable observing the potential differences in prediction capabilities of the solution for the two social groups. If there is a significant difference in the true positive score of the two test subsets(using a minimum of 5% as a rule of thumb), further actions must be taken to understand the reasons for this phenomenon, and how it can be mitigated.
+												</br>
+												</br>
+														There are some problem in the dataset, which can introduce performance and representation biases. One of them is the imbalance of acute liver failure occurrences. As mentioned before, the failure ratio is approximately 8%, which would make the overall accuracy too optimistic, while the recall score(sensitivity), which is the most important metric in medicine might be too low, if no other action is taken. </br>
+												</br>
+														For this reason, the study leverages the approach of upsampling the underrepresented class during the cross validation to avoid overfitting.</br>
+												        </br>
+														Another potential driver of representation bias, is the gender and gender-ALF distribution. Female patients represent approximately 47% of the dataset after dropping the rows missing an ALF value and have a lower percentage of people experiencing ALF compared to men. This could become the basis for a representation bias.
+														If such is observed, this paper suggests several approaches to reduce it. </br>
+														Firstly, it evaluates whether the most significant for prediction features are differently distributed for men and women. Interestingly, Age, which is the most significant positively correlated with the dependent variable characteristic, is higher on average for women than for men. Hence, in the case of disparity between the genders, this variable can be transformed as a remedy. On such occasions, age can be standardized separately for the two social groups by subtracting the mean of both and dividing by their standard deviations. In this way, both genders’ ages would have the same mean (0) and the same variance (1). </br>
+														</br>
+														The second approach consists of adjusting the sample_weight parameter in the fitting of the best performing on average models, which still show unfair treatment towards one of the genders. Intuitively, the data points representing the discriminated category are given a larger weight in the training, the hyperparameter optimization and the evaluation of results.
+												</p>
+
+											</div>
+										</article>
+										<article>
+											<div class="content">
+												<h3>RESULTS</h3>
+												<p> The performance of the tuned models on the entire test set in the below table will be used select the best model for which further bias analysis is performed. As mentioned before the aim is to maximize sensitivity but not at the cost of decreasing accuracy too much. Logistic Regression and Polynomial Logistic Regression present the same results and can be discussed together, since during the GridSearch optimization of hyperparameters the polynomial degree was set to 1. This makes them equivalent. Moreover, they are the ones with the highest sensitivity, followed closely by the K Nearest Neighbors classifier. All of the models based on tree methods including Random Forest and Gradient Boosting perform significantly worse. The ensemble method does not manage to improve the performance above the one of the single models. Therefore, this paper focuses primarily on Logistic Regression and K Nearest Neighbors to further optimize performance, and evaluate and reduce potential representation </p>
+												<a href="" class="image fit"><img src="images/generic1.png" alt="" /></a>
+												After the models are trained the test set is separated into a female and a male subset to observe the performance of the models for the two groups separately. The following scores are obtained:
+												<a href="" class="image fit"><img src="images/generic2.png" alt="" /></a>
+												The empirical study of acute liver failure prediction demonstrates clear and significantly large gender bias in favor of the female subset. For Logistic Regression, the disparity amounts to approximately 16.3% difference in sensitivity. In K Nearest Neighbors the model results in a 6% higher sensitivity score for women than for men. The same ratio is 11% higher for women using the Random Forest classifier and the Voting classifier, and 4% higher for the same social group according to Gradient Boosting. </br> </br>
+												The direction of the bias is unexpected because theory suggests that the underrepresented segment is most commonly the one that is harmed by a disparity. Instead, in this study women represent less than half of the dataset. Moreover, men can be seen as a risk group for two reasons. Firstly, the training set shows a higher density of “sick” male patients than female ones. As a result, during the oversampling of ALF more male data points are generated, and the difference in the percentage of ALF positiveness of the two genders becomes even larger than before. Secondly, the odds ratio, which represents the probability of men suffering from an acute liver failure over the probability of the same event for women, is greater than one, confirming the predisposition of men to the disease. Logically, this should increase the number of true positives of the male segment, and, since true positives are part of the nominator of sensitivity, it should be
+higher as well. The non-obviousness of the source of the bias is not surprising, because,
+as mentioned previously, such social inequalities are often subtle. </br>
+												</br>
+Nonetheless,the feature importance analysis performed in the study shows that age is
+the most significant positively correlated with ALF variable. Moreover, the average age of women in the dataset is 1.6 years
+higher compared to men. The skewness of the distribution of age by gender in the
+dataset could be the reason why women become more likely to get acute liver failure, which results in the significant gender bias in favor of the female subset.
+												</br>
+												Hence, the first bias reduction technique is the one of age standardization performed by gender.
+												 Nonetheless, the results show
+the transformation of age reduces the overall sensitivity of Logistic Regression by 0.5%
+and increases the bias of the same model by 2%. The same tendency is observed with
+K Nearest Neighbors - the sensitivity drops by 0.5%, while the bias rises by 5%. Hence,
+the first approach proved to have exactly the opposite of the desired effect and will not
+be applied. </br> </br>
+The second approach, based on the adjustment of sample weights, is performed
+on the Logistic Regression model only, as the K Nearest Neighbors classifier does not
+support it.
+												 Four different sets of weights are explored. All of them put the highest importance on the sick males as a technique to
+optimize true positive classifications, which is a common tool to minimize false negative
+misclassifications(known to cause the difference of sensitivities across the genders).
+</br>
+												</br>
+												With the first set of weights, an increase of 11% in overall sensitivity is accompanied
+by a reduction of the bias by more than 13%. However, their implementation leads
+also to a decrease of around 23% in accuracy. The negative effect of this method on
+accuracy is worrisome because its values become very close to the ones of the random
+classifier(40-50%). This suggests that another solution to the bias mitigation should be
+found.
+												</br></br>
+The second set of weights completely eliminates the bias in sensitivity, which increases
+to 100%, and has accuracy slightly higher than the one achieved by the application of
+the first set of weights. However, this accuracy is still very low and comparable with
+the one of the random classifier. It becomes clear that one might be willing to allow a
+certain percentage of bias to improve the overall accuracy.
+												</br></br>
+The third set of weights achieves this goal. The bias is reduced from 16.3% to
+approximately 3.2% in favor of women. The increase in sensitivity from the initial
+models is 11%, while the decrease in accuracy is 15%, which is 8% less than with the
+other sets of weights. The accuracy is now higher than the one achieved by a random
+classifier. Nonetheless, the drop in accuracy is still quite big and suggests that there is
+place for improvement of the solution.
+																							</br></br>
+
+The last set of weights has a different effect on the performance of the model. It
+causes the smallest decrease in accuracy(5.3%) and still manage to reduce the bias
+(from 16.3% to 1.7%). To achieve this it increases the overall sensitivity by 4% but it
+also decrease the sensitivity for the female segment by 4%. Nonetheless, it proves to
+have the best trade off between mitigating the bias, maximizing sensitivity and not
+decreasing accuracy too much; thus, it is the one that this paper suggests as a final
+solution.
+												The final results are presented in the below table:
+
+												<a href="" class="image fit"><img src="images/generic4.png" alt="" /></a>
+
+											</div>
+										</article>
+
+										<article>
+											<div class="content">
+												<h3>CONCLUSIONS</h3>
+													<p>
+														The aim of this paper was to determine whether representation biases exists in machine learning for medicine, why they exists, and how they can be reduced. To do so, it leveraged current literature and an empirical study consisting of the prediction of acute liver failure with a focus on the potential differences in its performance for the two genders.
+</br></br>
+Literature suggests that representation bias is present in algorithms, as it is in the judgment of people. On one hand, this final paper confirms the existence of such disparities in machine learning for medicine through an exemplary case, in which there is a significant bias with an ambiguous source and a surprising direction. On the other hand, it also proves that the enhancement of such prejudice by machines is preventable, as the inequality in performance for different social groups can be mitigated with the help of technological tools.
+</br></br>
+The solution offered is the one of giving a weight to each data point based on their demographic characteristic of interest and their dependent variable value. The weights should be given according to the fairness and optimization criterion, which, in the case of medicine, is sensitivity. It is important to note that, differently by common beliefs, it is not the most underrepresented group that should necessarily be given highest importance but rather the discriminated one. In the study, this group is the one of sick men. The weights given to data points according to their dependent variable value can be determined by the type of values optimized by the chosen score. In sensitivity this is the true positives; thus, patients with acute liver failure should be given more importance. This method manages to not only mitigate the bias but also improves the overall sensitivity.
+</br></br>
+Unfortunately, these results are achieved at the cost of the reduction of other performance metrics such as accuracy. The chosen solution is the one that harms this score the least but also manages to mitigate the discrimination. The rest of the proposed solutions have sensitivity close to 100% but it does not mean that they perform well. For example, one can also get trivially to 100% sensitivity when classifying everything as positive but the resulting model would not be reliable. The final solution has an overall sensitivity of 91.1%, a 1.7% bias benefiting women and reduces accuracy by 5.3%(much less than the other proposed solutions).
+</br></br>
+Because of the limitations of this study it might be best if a hybrid approach is used in the deployment of this technology. According to it, there should be a balance between algorithm and human judgment. The ways to develop it depend on the different applications of the models. If embraced by a Private Clinique, the models could be used only to determine whether further examinations should be done to confirm the diagnosis rather than whether a treatment should be started. Moreover, physicians should be trained to work side-by-side with the algorithm to achieve optimal use of the technology.
+</br></br>
+Instead, if the algorithm is deployed on an app, it might be best to be transparent with the users about the performance of the model. They should be aware that, while there is a low probability that they are told to be healthy, but are actually not, there still is a significant possibility that they are told to be sick, but are actually healthy. Hence, the algorithm shall be used as a mechanism to suggest visiting a doctor or scheduling further examinations.
+													</p>
+											</div>
+										</article>
+										<article>
+
+										</div>
+											<div class="content">
+													<p>You can find the code and dataset on my Github page here: <a href = "https://github.com/radageorgieva/Disease_Prediction.git" class="icon brands fa-github"> </a></p>
+											</div>
+										</article>
+
+									</div>
+								</section>
+								<header>
+
+
+
+					</div>
+					<footer>
+						<section>
+
+
+								<h3>Social</h3>
+								<ul class="icons alt">
+
+
+									<li><a href="https://www.linkedin.com/in/rada-georgieva/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									<li><a href="https://github.com/radageorgieva" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+
+								</ul>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Rada Georgieva</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
